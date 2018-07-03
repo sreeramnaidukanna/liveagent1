@@ -29,22 +29,11 @@ var initESW = function(gslbBaseURL) {
 embedded_svc.settings.displayHelpButton = true; //Or false
 embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
-embedded_svc.settings.extraPrechatFormDetails = [{
-"label": "Case Origin",
-"value": "Chat - IT",
-"displayToAgent": false
-}];
+embedded_svc.settings.prepopulatedPrechatFields = {
+    Origin: "Chat - IT"
+};
 
-embedded_svc.settings.extraPrechatInfo = [{
-    "entityFieldMaps": [{
-        "fieldName": "Origin",
-        "label": "Case Origin",
-        "doCreate" : false,
-        "doFind" : false,
-        "isExactMatch" : false
-    }],
-    "entityName": "Case"
-}];
+
 
 //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
